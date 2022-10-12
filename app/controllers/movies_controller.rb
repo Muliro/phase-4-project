@@ -25,14 +25,12 @@ class MoviesController < ApplicationController
     end
 
     def update
-        def update
-            bird = Bird.find_by(id: params[:id])
-            if bird
-              bird.update(bird_params)
-              render json: bird
-            else
-              render json: { error: "Bird not found" }, status: :not_found
-            end
+        movie = Movie.find_by(id: params[:id])
+        if movie
+          movie.update(movie_params)
+          render json: movie
+        else
+          render json: { error: "Movie not found" }, status: :not_found
         end
     end
     
