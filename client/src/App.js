@@ -36,9 +36,10 @@ function App() {
   return (
     <>
       <NavBar user={user} setUser={setUser} />
+      <MovieList/>
       <main>
         <Switch>
-          <Route path="/new">
+          <Route path="/movies">
             <NewMovie user={user} />
           </Route>
           <Route path="/movies">

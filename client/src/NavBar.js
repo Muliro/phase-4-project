@@ -20,10 +20,10 @@ function NavBar({ user, setUser }) {
   return (
     <>
       <h1>
-        <Link to="/movies">Binge Bucket</Link>
+        <Link to="">Binge Bucket</Link>
       </h1>
       <nav>
-        <button as={Link} to="/movies">
+        <button as={Link} to="/new">
           New Movie
         </button>
         <button  onClick={handleLogoutClick}>
