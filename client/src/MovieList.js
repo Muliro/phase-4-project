@@ -33,7 +33,7 @@ function MovieList() {
                 <cite>Directed By: {movie.director}</cite>
                 &nbsp;·&nbsp;
                 <cite> {movie.reviews.map((reviews) => (
-                  <em key = {reviews.id}>Review : {reviews.review} <br></br></em>
+                  <em key ={reviews.id}>Review : {reviews.review}<br></br></em>
                 ))}</cite>
               </p>
               
