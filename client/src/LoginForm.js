@@ -7,6 +7,7 @@
 
 import React, { useState } from "react";
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 function LoginForm({ onLogin }) {
@@ -38,7 +39,7 @@ function LoginForm({ onLogin }) {
     <form onSubmit={handleSubmit}>
       
         <p>Username</p>
-        <input
+        <TextField
           type="text"
           id="username"
           autoComplete="off"
@@ -48,7 +49,7 @@ function LoginForm({ onLogin }) {
       
       
         <p>Password</p>
-        <input
+        <TextField
           type="password"
           id="password"
           autoComplete="current-password"
