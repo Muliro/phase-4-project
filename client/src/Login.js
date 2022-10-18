@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
+import Button from '@mui/material/Button';
 
 
 function Login({ onLogin }) {
@@ -23,9 +24,9 @@ function Login({ onLogin }) {
           
           <p>
             Don't have an account? &nbsp;
-            <button type = "submit" onClick={() => setShowLogin(false)}>
+            <Button type = "submit" onClick={() => setShowLogin(false)}>
               Sign Up
-            </button>
+            </Button>
           </p>
         </>
       ) : (
@@ -34,9 +35,9 @@ function Login({ onLogin }) {
           
           <p>
             Already have an account? &nbsp;
-            <button type = "submit" onClick={() => setShowLogin(true)}>
+            <Button type = "submit" onClick={() => setShowLogin(true)}>
               Log In
-            </button>
+            </Button>
           </p>
         </>
       )}

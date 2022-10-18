@@ -6,6 +6,8 @@
 
 
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
+
 
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -55,9 +57,9 @@ function LoginForm({ onLogin }) {
         />
       
       
-        <button  type="submit">
+        <Button  type="submit" variant = "contained">
           {isLoading ? "Loading..." : "Login"}
-        </button>
+        </Button>
       
       <ul>
         {errors.map((err) => (
@@ -66,6 +68,7 @@ function LoginForm({ onLogin }) {
       </ul>
 
     </form>
+   
   );
 }
 

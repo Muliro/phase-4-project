@@ -7,6 +7,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 
 
@@ -25,7 +26,7 @@ function MovieList() {
       {movies.length > 0 ? (
         movies.map((movie) => (
           <li key={movie.id}>
-             <img alt = "movieposter" src = {movie.movie_poster}></img>
+             <img alt = "movie poster" src = {movie.movie_poster}></img>
               <h2>{movie.name}</h2>
               <p>
                 <em>Actor: {movie.lead_actor} </em>
@@ -33,11 +34,12 @@ function MovieList() {
                 <cite>Directed By: {movie.director}</cite>
                 &nbsp;·&nbsp;
                 <cite> {movie.reviews.map((reviews) => (
+                  
                   <em key ={reviews.id}>Review : {reviews.review}<br></br></em>
                 ))}</cite>
               </p>
-              
-            
+              return <Button variant="contained">Delete</Button>;
+
           </li>
 
         ))

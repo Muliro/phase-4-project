@@ -38,11 +38,11 @@ function App() {
       <NavBar user={user} setUser={setUser} />
       <main>
         <Switch>
-          <Route  path="/new">
-            <NewMovie user={user} />
-          </Route>
-          <Route  path="/">
+          <Route exact path="/">
             <MovieList />
+          </Route>
+          <Route exact path="http://localhost:4000/new">
+            <NewMovie />
           </Route>
         </Switch>
       </main>

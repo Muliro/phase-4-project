@@ -12,6 +12,9 @@
 
 
 import React, { useState } from "react";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 
 function SignUpForm({ onLogin }) {
@@ -46,10 +49,11 @@ function SignUpForm({ onLogin }) {
   }
 
   return (
+
     <form onSubmit={handleSubmit}>
       
         <p>Username</p>
-        <input
+        <TextField
           type="text"
           id="username"
           autoComplete="off"
@@ -59,7 +63,7 @@ function SignUpForm({ onLogin }) {
     
       
         <p>Password</p>
-        <input
+        <TextField
           type="password"
           id="password"
           value={password}
@@ -68,15 +72,17 @@ function SignUpForm({ onLogin }) {
         />
       
         <p>Password Confirmation</p>
-        <input
+        <TextField
           type="password"
           id="password_confirmation"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />
-      
-        <button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+      <Button  type="submit" variant = "contained">
+          {isLoading ? "Loading..." : "Sign Up"}
+      </Button>
+        
       <ul>
         {errors.map((err) => (
           <li key={err}>{err}</li>
